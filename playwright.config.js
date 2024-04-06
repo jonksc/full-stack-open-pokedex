@@ -1,5 +1,5 @@
 // @ts-check
-const { defineConfig, devices } = require('@playwright/test');
+const { defineConfig, devices } = require('@playwright/test')
 
 /**
  * Read environment variables from file.
@@ -11,12 +11,12 @@ const { defineConfig, devices } = require('@playwright/test');
  * @see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
-	webServer: {
-		command: 'npm run start',
+  webServer: {
+    command: 'npm run start',
     url: 'http://127.0.0.1:8080',
     timeout: 120 * 1000,
-		reuseExistingServer: !process.env.CI,
-	},
+    reuseExistingServer: !process.env.CI,
+  },
   testDir: './e2e-tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -34,7 +34,7 @@ module.exports = defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-		baseURL: 'http://localhost:8080',
+    baseURL: 'http://localhost:8080',
     trace: 'on-first-retry',
   },
 
@@ -82,5 +82,5 @@ module.exports = defineConfig({
   //   url: 'http://127.0.0.1:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
-});
+})
 
