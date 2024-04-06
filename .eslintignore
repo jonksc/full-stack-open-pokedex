@@ -1,3 +1,4 @@
 webpack.config.js
 node_modules/
 dist/
+pokedex-e2e.spec.js
